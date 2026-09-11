@@ -3,9 +3,9 @@
 // confirmed project documentation: location, developer, floorplan count and
 // square footage range, and positioning line. Storey count and total unit
 // count are deliberately left out because neither is confirmed anywhere in
-// that documentation — don't infer or add them. Photography is still a
-// placeholder (see .photo-placeholder in globals.css) until real renderings
-// or site photos are supplied.
+// that documentation — don't infer or add them. `image` is a real exterior
+// photo supplied directly by Chris; components fall back to
+// .photo-placeholder (globals.css) whenever a project has no `image` set.
 
 export type ProjectStatus = "Now Selling" | "Coming Soon" | "Sold Out";
 
@@ -21,6 +21,7 @@ export type Project = {
   summary: string[];
   positioning: string;
   website: string;
+  image?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -40,6 +41,7 @@ export const PROJECTS: Project[] = [
     ],
     positioning: "Parkside living, adjacent to Elks Park.",
     website: "liveatluxora.ca",
+    image: "/images/luxora-exterior.jpg",
   },
 ];
 

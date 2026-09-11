@@ -8,9 +8,18 @@ export default function ProjectDetail({ project }: { project: Project }) {
     <>
       <section className="relative bg-ink -mt-[88px] pt-[160px] pb-20 overflow-hidden">
         <div className="absolute top-0 left-0 h-[3px] w-32 bg-fern-light" />
-        <div className="absolute inset-0 photo-placeholder text-[10px] opacity-60">
-          Project photography
-        </div>
+        {project.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={project.image}
+            alt={`${project.name} exterior`}
+            className="absolute inset-0 h-full w-full object-cover opacity-70"
+          />
+        ) : (
+          <div className="absolute inset-0 photo-placeholder text-[10px] opacity-60">
+            Project photography
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/40" />
 
         <div className="relative max-w-content mx-auto px-6 md:px-10">

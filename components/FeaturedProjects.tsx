@@ -22,9 +22,18 @@ export default function FeaturedProjects() {
               className="group block md:col-span-6"
             >
               <div className="aspect-[4/3] relative overflow-hidden rounded-sm">
-                <div className="absolute inset-0 photo-placeholder transition-transform duration-500 ease-premium group-hover:scale-[1.03]">
-                  Project photography
-                </div>
+                {project.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={project.image}
+                    alt={`${project.name} exterior`}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className="absolute inset-0 photo-placeholder transition-transform duration-500 ease-premium group-hover:scale-[1.03]">
+                    Project photography
+                  </div>
+                )}
                 <span className="absolute top-4 left-4 font-archivo text-[10px] uppercase tracking-caps bg-paper text-ink px-3 py-1.5">
                   {project.status}
                 </span>

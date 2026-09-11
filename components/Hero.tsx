@@ -6,9 +6,15 @@ export default function Hero() {
   return (
     <section className="relative bg-ink min-h-[92vh] flex items-end overflow-hidden -mt-[88px]">
       {/* the wordmark's own accent line is this surface's one fern element */}
-      <div className="absolute inset-0 photo-placeholder text-[10px]">
-        Project photography
-      </div>
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/video/hero.mp4"
+        poster="/video/hero-poster.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
 
       <div className="relative max-w-content mx-auto w-full px-6 md:px-10 pb-20 md:pb-28 pt-40">
