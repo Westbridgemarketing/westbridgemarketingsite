@@ -33,7 +33,7 @@ export default function ContactForm() {
       "Message:",
       message,
     ].join("\n");
-    window.location.href = `mailto:studio@westbridge.co?subject=${encodeURIComponent(
+    window.location.href = `mailto:info@westbridgemarketing.ca?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   };

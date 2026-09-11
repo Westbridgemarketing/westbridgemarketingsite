@@ -23,10 +23,10 @@ export default function Contact() {
                   Email
                 </p>
                 <a
-                  href="mailto:studio@westbridge.co"
+                  href="mailto:info@westbridgemarketing.ca"
                   className="font-grotesk text-ink text-lg hover:text-fern transition-colors duration-300 ease-premium"
                 >
-                  studio@westbridge.co
+                  info@westbridgemarketing.ca
                 </a>
               </div>
             </div>
